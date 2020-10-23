@@ -1,11 +1,10 @@
-function dropdown() {
-    document.getElementById("avatar-dropdown").classList.toggle("show");
-}
-
 $(function(){
     $.get("https://private-anon-2fdffe98c5-wad20postit.apiary-mock.com/users/1", function(respose){
-        let profilePicture = $('<img class="avatar">').attr('src', respose.avatar).attr('onclick','dropdown()');
-        let dropdown = $('<div id="avatar-dropdown" class="dropdown-content">');
+        let profilePicture = $('<img class="avatar">').attr('src', respose.avatar);
+        let dropdown = $('<div class="dropdown-content">');
+        profilePicture.click(function(){
+            $(dropdown).toggle("show");
+        })
         dropdown.append($("<p></p>").text(respose.firstname + " " + respose.lastname));
         dropdown.append($("<p></p>").text(respose.email));
 
