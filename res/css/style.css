@@ -207,8 +207,6 @@ nav div.avatar-container {
 .profile-box > button.followed {
   background-color: white;
   color: #910186;
-  border: 2px solid #910186
-
 }
 
 
@@ -252,12 +250,19 @@ nav div.avatar-container {
     border: 1px solid #f1f1f1;
 }
 .profile-box img{
-    width: 50%;
     margin-top: 15px;
     border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 .profile-box button{
     background-color:#910186;
     text-align: center;
     margin-bottom: 5px;
+    border: 2px solid #910186
+
 }
